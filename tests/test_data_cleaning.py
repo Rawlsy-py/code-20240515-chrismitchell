@@ -4,12 +4,13 @@ import pytest
 
 from vamstar.data_cleaning import mean_population_data
 
+df = pd.DataFrame(
+    {"A": [1, 2, None, 4, 5], "B": [None, 2, 3, 4, 5], "C": [1, 2, 3, None, 5]}
+)
 
-def test_mean_population_data():
+
+def test_mean_population_data(df: DataFrame = df):
     # Create a sample DataFrame with missing values
-    df = pd.DataFrame(
-        {"A": [1, 2, None, 4, 5], "B": [None, 2, 3, 4, 5], "C": [1, 2, 3, None, 5]}
-    )
 
     # Call the function to clean the DataFrame
     cleaned_df = mean_population_data(df)

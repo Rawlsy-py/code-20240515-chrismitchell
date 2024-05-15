@@ -1,7 +1,7 @@
 import pandas as pd
 from pandas import DataFrame
 
-df = pd.read_csv("Interview Analysis Molecule.tsv", sep="\t")
+df = pd.read_csv("test.tsv", sep="\t")
 
 
 def mean_population_data(df: DataFrame) -> DataFrame:
